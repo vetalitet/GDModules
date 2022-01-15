@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class SdkApplication: Application() {
 
-    private val coroutineScope = CoroutineScope(Dispatchers.Main + Job())
+    private val coroutineScope = CoroutineScope(Dispatchers.IO + Job())
 
     override fun onCreate() {
         super.onCreate()
