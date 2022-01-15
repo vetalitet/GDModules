@@ -1,9 +1,7 @@
 package com.vetalitet.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -14,28 +12,16 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.vetalitet.foundation.FoundationConstants
 import com.vetalitet.themes.ThemeProvider
-import com.vetalitet.ui.databinding.FragmentSdkBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-class SdkFragment : Fragment() {
+class SdkFragment : Fragment(R.layout.fragment_sdk) {
 
     private val coroutineScope = CoroutineScope(Dispatchers.Main + Job())
     private val viewModel by lazy {
         ViewModelProvider(this)[SdkViewModel::class.java]
-    }
-
-    private lateinit var binding: FragmentSdkBinding
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentSdkBinding.inflate(inflater, container, false)
-        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
