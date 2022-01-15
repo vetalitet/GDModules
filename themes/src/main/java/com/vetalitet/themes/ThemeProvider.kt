@@ -14,7 +14,7 @@ object ThemeProvider {
 
     private var loadedThemes: Theme = defaultTheme()
 
-    suspend fun setTheme(newTheme: Theme) = withContext(Dispatchers.IO) {
+    suspend fun setTheme(newTheme: Theme) {
         loadedThemes = newTheme
         delay(200)
         _theme.emit(loadedThemes)
