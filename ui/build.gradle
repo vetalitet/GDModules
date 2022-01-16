@@ -61,4 +61,5 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0"
+    kaptAndroidTest "androidx.databinding:databinding-compiler:7.0.4"
 }
