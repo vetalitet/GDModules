@@ -7,8 +7,8 @@ class Theme private constructor(
     val textColor: Int
 ) {
     data class Builder(
-        var bgColor: Int = Color.GRAY,
-        var textColor: Int = Color.BLACK
+        var bgColor: Int = Color.BLACK,
+        var textColor: Int = Color.WHITE
     ) {
         fun bgColor(bgColor: Int) = apply { this.bgColor = bgColor }
         fun textColor(textColor: Int) = apply { this.textColor = textColor }

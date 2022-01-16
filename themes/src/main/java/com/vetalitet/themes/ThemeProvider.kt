@@ -1,30 +1,23 @@
 package com.vetalitet.themes
 
-import android.graphics.Color
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.StateFlow
 
 object ThemeProvider {
 
     private val _theme = MutableSharedFlow<Theme>(replay = 1, extraBufferCapacity = 1)
     val theme : SharedFlow<Theme> = _theme
 
-    private var loadedThemes: Theme = defaultTheme()
+    private var _currentTheme = MutableStateFlow(Theme.Builder().build())
+    val currentTheme: StateFlow<Theme> = _currentTheme
 
     suspend fun setTheme(newTheme: Theme) {
-        loadedThemes = newTheme
-        delay(200)
-        _theme.emit(loadedThemes)
-    }
-
-    private fun defaultTheme(): Theme {
-        return Theme.Builder()
-            .bgColor(Color.BLACK)
-            .textColor(Color.WHITE)
-            .build()
+        delay(2000)
+        _currentTheme.emit(newTheme)
+        _theme.emit(newTheme)
     }
 
 }

@@ -13,11 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         startActivity(Intent(this, SdkActivity::class.java))
         finish()
-        /*if(savedInstanceState == null) { // initial transaction should be wrapped like this
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, SdkFragment())
-                .commitAllowingStateLoss()
-        }*/
     }
 
 }
