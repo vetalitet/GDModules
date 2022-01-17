@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="android.view.View" />
         <variable
             name="theme"
             type="com.vetalitet.themes.Theme" />
         <variable
             name="viewModel"
-            type="com.vetalitet.ui.fragments.LoginViewModel" />
+            type="com.vetalitet.ui.features.login.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

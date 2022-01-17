@@ -1,4 +1,4 @@
-package com.vetalitet.ui.fragments
+package com.vetalitet.ui.features.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

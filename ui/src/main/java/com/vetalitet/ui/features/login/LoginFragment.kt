@@ -1,4 +1,4 @@
-package com.vetalitet.ui.fragments
+package com.vetalitet.ui.features.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.vetalitet.themes.ThemeProvider
+import com.vetalitet.ui.R
 import com.vetalitet.ui.core.UiState
 import com.vetalitet.ui.databinding.FragmentLoginBinding
 import kotlinx.coroutines.launch
@@ -54,7 +56,7 @@ class LoginFragment : Fragment() {
         viewModel.loginLiveData.observe(viewLifecycleOwner, {
             if (it is UiState.Success<*>) {
                 val value = (it as UiState.Success<String>).result
-                Toast.makeText(requireContext(), value, Toast.LENGTH_LONG).show()
+                findNavController().navigate(R.id.mainFragment)
             }
         })
     }

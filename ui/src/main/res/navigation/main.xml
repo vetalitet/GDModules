@@ -6,8 +6,14 @@
     app:startDestination="@id/loginFragment">
 
     <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.vetalitet.ui.features.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
         android:id="@+id/loginFragment"
-        android:name="com.vetalitet.ui.fragments.LoginFragment"
+        android:name="com.vetalitet.ui.features.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login" />
 
