@@ -21,7 +21,7 @@ class SdkApplication: Application() {
     }
 
     private fun createTheme() = Theme.Builder()
-        .bgColor(Color.GREEN)
+        .bgColor(Color.DKGRAY)
         .textColor(Color.BLUE)
         .build()
 

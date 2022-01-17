@@ -3,7 +3,7 @@
     package="com.vetalitet.ui">
 
     <application>
-        <activity android:name=".SdkActivity" />
+        <activity android:name=".NavigationActivity" />
     </application>
 
 </manifest>

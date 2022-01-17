@@ -15,7 +15,7 @@ object ThemeProvider {
     val currentTheme: StateFlow<Theme> = _currentTheme
 
     suspend fun setTheme(newTheme: Theme) {
-        delay(2000)
+        delay(200)
         _currentTheme.emit(newTheme)
         _theme.emit(newTheme)
     }
