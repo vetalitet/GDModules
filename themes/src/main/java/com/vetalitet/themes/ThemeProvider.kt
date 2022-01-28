@@ -8,16 +8,16 @@ import kotlinx.coroutines.flow.StateFlow
 
 object ThemeProvider {
 
-    private val _theme = MutableSharedFlow<Theme>(replay = 1, extraBufferCapacity = 1)
-    val theme : SharedFlow<Theme> = _theme
+    /*private val _theme = MutableSharedFlow<Theme>(replay = 1, extraBufferCapacity = 1)
+    val theme: SharedFlow<Theme> = _theme*/
 
     private var _currentTheme = MutableStateFlow(Theme.Builder().build())
     val currentTheme: StateFlow<Theme> = _currentTheme
 
     suspend fun setTheme(newTheme: Theme) {
-        delay(200)
+        delay(2500)
         _currentTheme.emit(newTheme)
-        _theme.emit(newTheme)
+        //_theme.emit(newTheme)
     }
 
 }

@@ -1,28 +1,16 @@
 package com.vetalitet.gdmodules
 
 import android.app.Application
-import android.graphics.Color
-import com.vetalitet.themes.Theme
+import android.util.Log
+import com.vetalitet.themes.SdkProvider
 import com.vetalitet.themes.ThemeProvider
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
 
-class SdkApplication: Application() {
-
-    private val coroutineScope = CoroutineScope(Dispatchers.IO + Job())
+class SdkApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        coroutineScope.launch {
-            ThemeProvider.setTheme(createTheme())
-        }
+        Log.d("DEBUG__", "SdkApplication")
+        SdkProvider.setTheme("https://filesamples.com/samples/document/txt/sample3.txt")
     }
-
-    private fun createTheme() = Theme.Builder()
-        .bgColor(Color.DKGRAY)
-        .textColor(Color.BLUE)
-        .build()
 
 }

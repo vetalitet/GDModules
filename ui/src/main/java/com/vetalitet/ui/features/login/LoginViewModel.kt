@@ -8,7 +8,7 @@ import com.vetalitet.network.Api
 import com.vetalitet.ui.core.UiState
 import kotlinx.coroutines.launch
 
-class LoginViewModel : ViewModel() {
+class LoginViewModel(private val api: Api) : ViewModel() {
 
     private val _loginLiveData = MutableLiveData<UiState?>()
     val loginLiveData: LiveData<UiState?> = _loginLiveData
@@ -16,7 +16,7 @@ class LoginViewModel : ViewModel() {
     fun login() {
         _loginLiveData.postValue(UiState.Loading)
         viewModelScope.launch {
-            val result = Api().getSuspendedData()
+            val result = api.getSuspendedData()
             _loginLiveData.postValue(UiState.Success(result))
         }
     }
