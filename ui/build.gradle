@@ -70,4 +70,6 @@ dependencies {
     // Koin
     api "org.koin:koin-androidx-viewmodel:2.2.2"
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0-alpha01"
+
+    implementation "androidx.startup:startup-runtime:1.1.0"
 }
