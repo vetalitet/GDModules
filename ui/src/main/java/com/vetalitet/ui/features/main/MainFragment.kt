@@ -7,8 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.vetalitet.themes.ThemeProvider
 import com.vetalitet.ui.databinding.FragmentMainBinding
+import com.vetalitet.ui.di.setup.LibKoinComponent
+import com.vetalitet.ui.features.BaseFragment
+import org.koin.core.component.KoinApiExtension
 
-class MainFragment: Fragment() {
+@KoinApiExtension
+class MainFragment: BaseFragment() {
 
     private lateinit var binding: FragmentMainBinding
 

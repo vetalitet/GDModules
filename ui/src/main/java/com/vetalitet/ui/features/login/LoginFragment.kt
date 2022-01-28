@@ -14,10 +14,14 @@ import com.vetalitet.themes.ThemeProvider
 import com.vetalitet.ui.R
 import com.vetalitet.ui.core.UiState
 import com.vetalitet.ui.databinding.FragmentLoginBinding
+import com.vetalitet.ui.di.setup.LibKoinComponent
+import com.vetalitet.ui.features.BaseFragment
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.component.KoinApiExtension
 
-class LoginFragment : Fragment() {
+@KoinApiExtension
+class LoginFragment : BaseFragment() {
 
     private lateinit var binding: FragmentLoginBinding
     private val viewModel by viewModel<LoginViewModel>()

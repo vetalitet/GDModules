@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vetalitet.ui">
 
-    <application
-        android:name=".App">
+    <application>
+        <provider
+            android:name=".di.setup.InitKoinContentProvider"
+            android:authorities="com.vetalitet.ui.koin" />
         <activity android:name=".NavigationActivity" />
     </application>
 
