@@ -3,9 +3,9 @@
     package="com.vetalitet.themes">
 
     <application>
-        <provider
+        <!--<provider
             android:authorities="com.vetalitet.themes.provider"
-            android:name=".ThemesApplicationProvider" />
+            android:name=".ThemesApplicationProvider" />-->
     </application>
 
 </manifest>
