@@ -5,7 +5,9 @@
     <application>
         <provider
             android:name=".di.setup.InitKoinContentProvider"
-            android:authorities="com.vetalitet.ui.koin" />
+            android:authorities="${applicationId}.koin"
+            android:exported="false"
+            android:enabled="true" />
         <activity android:name=".NavigationActivity" />
     </application>
 
